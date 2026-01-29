@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lokesh Sharma | Data Analyst Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#0a0a0a;
+--card:#111111;
+--border:#1f1f1f;
+--text:#eaeaea;
+--muted:#a0a0a0;
+--purple:#a855f7;
+--purple2:#7c3aed;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+a{text-decoration:none;color:var(--purple);}
+
+#data-bg{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+z-index:-1;
+opacity:0.12;
+pointer-events:none;
+}
+
+.section{padding:90px 8%;}
+.section-title{font-size:2.3rem;font-weight:700;color:#c084fc;}
+.underline{width:50px;height:4px;background:linear-gradient(90deg,var(--purple),var(--purple2));border-radius:10px;margin:12px 0 25px;}
+.section-sub{color:var(--muted);max-width:700px;margin-bottom:40px;}
+
+.glass{
+background:linear-gradient(180deg,#111,#0c0c0c);
+border:1px solid var(--border);
+border-radius:16px;
+padding:28px;
+box-shadow:0 0 20px rgba(168,85,247,.08);
+transition:.3s;
+}
+.glass:hover{box-shadow:0 0 35px rgba(168,85,247,.25);transform:translateY(-4px);}
+
+.grid{display:grid;gap:28px;}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+
+.btn{
+background:linear-gradient(90deg,var(--purple),var(--purple2));
+padding:12px 26px;
+border-radius:10px;
+color:white;
+font-weight:600;
+box-shadow:0 0 20px rgba(168,85,247,.35);
+display:inline-block;
+transition:.3s;
+}
+.btn:hover{box-shadow:0 0 30px rgba(168,85,247,.6);transform:translateY(-2px);}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;left:0;width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+z-index:999;
+border-bottom:1px solid var(--border);
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;}
+.logo-circle{
+width:36px;height:36px;border-radius:50%;
+background:linear-gradient(135deg,var(--purple),var(--purple2));
+display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+nav a{color:#ddd;margin-left:22px;font-size:.95rem;}
+nav a:hover{color:white;}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+padding:120px 8% 60px;
+}
+.hero h1{font-size:3.2rem;}
+.hero h2{font-size:1.4rem;color:#c084fc;margin:10px 0;}
+.hero p{color:var(--muted);max-width:520px;}
+.hero-actions{margin-top:25px;display:flex;gap:15px;flex-wrap:wrap;}
+
+.profile-box{
+background:linear-gradient(180deg,#111,#0c0c0c);
+border-radius:20px;
+padding:25px;
+border:1px solid var(--border);
+text-align:center;
+box-shadow:0 0 40px rgba(168,85,247,.15);
+}
+.profile-box img{
+width:260px;height:260px;border-radius:14px;
+object-fit:cover;border:2px solid var(--border);
+}
+
+/* LOGOS */
+.logo-img{
+width:48px;height:48px;
+object-fit:contain;
+background:#0e0e0e;
+border-radius:10px;
+padding:6px;
+border:1px solid var(--border);
+}
+
+/* CONNECT */
+.connect-grid{display:flex;gap:25px;flex-wrap:wrap;}
+.connect-card{
+min-width:180px;
+text-align:center;
+padding:16px 0;
+border-radius:12px;
+background:#0e0e0e;
+border:1px solid var(--border);
+color:white;
+transition:.3s;
+}
+.connect-card:hover{box-shadow:0 0 30px rgba(168,85,247,.5);border-color:var(--purple);}
+
+footer{
+text-align:center;
+padding:50px;
+border-top:1px solid var(--border);
+color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="data-bg"></canvas>
+
+<!-- NAV -->
+<nav>
+<div class="logo">
+<div class="logo-circle">Ls</div>
+<span>Lokesh Sharma</span>
+</div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="mailto:Ls42409@gmail.com" class="btn">Hire Me</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Lokesh Sharma</h1>
+<h2>Data Analyst</h2>
+<p>Transforming data into actionable business intelligence through analytics, automation, and insight-driven decision making.</p>
+
+<div class="hero-actions">
+<a href="#projects" class="btn">View Projects</a>
+<a href="resume.pdf" download class="btn">Download Resume</a>
+</div>
+</div>
+
+<div class="profile-box">
+<img src="profile.jpg" alt="Lokesh Sharma">
+<p style="margin-top:15px;color:var(--muted);">Chennai, Tamil Nadu, India</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+<h2 class="section-title">About Me</h2>
+<div class="underline"></div>
+<p class="section-sub">Get to know more about my professional journey and what drives me.</p>
+
+<div class="glass">
+<h3>Professional Summary</h3><br>
+<p>
+Analyst with 1+ year of experience in data analysis, reporting, dashboarding, and process automation. Skilled in using SQL, Excel, Tableau, Power BI, and Python to transform raw data into actionable insights. Experienced in working with cross-functional teams, improving reporting efficiency, and supporting data-driven decision-making across business and operational domains. Backed by 2 years of freelance digital marketing experience, bringing strong business context to data-driven decision-making.
+</p>
+<br>
+<h4>Core Competencies</h4>
+<p>SQL • Excel • Power BI • Python</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+<h2 class="section-title">Skills & Expertise</h2>
+<div class="underline"></div>
+
+<div class="grid grid-2">
+<div class="glass">
+<h3>Technical Skills</h3><br>
+<p>
+• MIS Reporting, KPI Dashboards, Data Validation, Data Cleaning, Process Automation<br>
+• Tools: Tableau, Power BI, Advanced Excel (Pivot Tables, VLOOKUP, XLOOKUP, Macros)<br>
+• Programming: SQL (Joins, Subqueries, CTEs), Python (Pandas, NumPy)<br>
+• Databases: MySQL<br>
+• Analytics: Business Intelligence, A/B Testing, Trend Analysis
+</p>
+</div>
+
+<div class="glass">
+<h3>Domain Skills</h3><br>
+<p>
+• Business Operations<br>
+• Social Media Analytics<br>
+• SEO/SEM<br>
+• Reporting Automation
+</p>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+<h2 class="section-title">Professional Experience</h2>
+<div class="underline"></div>
+
+<div class="grid grid-2">
+
+<div class="glass">
+<div style="display:flex;align-items:center;gap:15px;">
+<img src="schoolsindia.png" class="logo-img">
+<h3>SchoolsIndia Pvt Ltd</h3>
+</div>
+<p><b>Business Data Analyst</b></p>
+<p>Full Time | Dec 2024 – Ongoing</p>
+<p>Chennai, Tamil Nadu, India</p><br>
+<p>
+• Developed and maintained MIS dashboards using Tableau and Excel<br>
+• Automated recurring MIS reports reducing manual reporting time by 30–40%<br>
+• Performed data cleaning, validation, and reconciliation<br>
+• Analyzed social media and operational datasets<br>
+• Delivered actionable insights to stakeholders
+</p>
+</div>
+
+<div class="glass">
+<div style="display:flex;align-items:center;gap:15px;">
+<img src="freelancer.png" class="logo-img">
+<h3>Freelancer.com</h3>
+</div>
+<p><b>Digital Marketing Analyst</b></p>
+<p>Jul 2022 – May 2024 | Remote</p><br>
+<p>
+Analyzed SEO and campaign performance data, improving traffic and engagement by up to 40%. Created performance reports and insights to support campaign optimization.
+</p>
+</div>
+
+<div class="glass">
+<div style="display:flex;align-items:center;gap:15px;">
+<img src="esparse.png" class="logo-img">
+<h3>eSparse Matrix Solutions Pvt Ltd</h3>
+</div>
+<p><b>Sales Development Intern</b></p>
+<p>Jun 2023 – Jul 2023 | Remote</p><br>
+<p>
+Helped organize sales data by profiling leads and segmenting customer lists. Created simple sales performance reports to help marketing teams track targets.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+<h2 class="section-title">Education</h2>
+<div class="underline"></div>
+
+<div class="grid grid-2">
+
+<div class="glass">
+<div style="display:flex;align-items:center;gap:15px;">
+<img src="newton.png" class="logo-img">
+<h3>Newton School</h3>
+</div>
+<p>Data Science</p>
+<p>2024 – 2026</p>
+</div>
+
+<div class="glass">
+<div style="display:flex;align-items:center;gap:15px;">
+<img src="iittm.png" class="logo-img">
+<h3>Indian Institute Of Tourism And Travel Management</h3>
+</div>
+<p>Bachelor of Business Administration (BBA)</p>
+<p>2021 – 2024</p>
+<p>Tourism and Travel Services Management</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+<h2 class="section-title">Projects</h2>
+<div class="underline"></div>
+
+<div class="grid grid-3">
+
+<div class="glass">
+<h3>Twitter Overspending A/B Testing</h3>
+<p>Analyzed A/B test results to evaluate if a new impression-based ad product minimized overspending compared to the existing click-based model. Provided statistical evidence to support budget optimization strategies.</p>
+<a href="https://github.com/Lokeshhsharmaa?tab=repositories" target="_blank">View Project →</a>
+</div>
+
+<div class="glass">
+<h3>Power BI – Columbia Asia Hospital</h3>
+<p>Comprehensive hospital analytics for revenue optimization, patient satisfaction, and departmental performance. Delivered data-driven recommendations that enhanced patient experience and streamlined operations.</p>
+<a href="https://github.com/Lokeshhsharmaa?tab=repositories" target="_blank">View Project →</a>
+</div>
+
+<div class="glass">
+<h3>SQL – Bank CRM Analysis</h3>
+<p>End-to-end SQL analysis on customer datasets to identify churn drivers and service improvement opportunities. Built insights supporting targeted CRM strategies.</p>
+<a href="https://github.com/Lokeshhsharmaa?tab=repositories" target="_blank">View Project →</a>
+</div>
+
+<div class="glass">
+<h3>Zomato Restaurants Analysis</h3>
+<p>Strategic expansion recommendations using Google Sheets & Excel. Identified high-potential areas and optimized restaurant placement strategies.</p>
+<a href="https://github.com/Lokeshhsharmaa?tab=repositories" target="_blank">View Project →</a>
+</div>
+
+<div class="glass">
+<h3>AI-Driven Smart Chatbot</h3>
+<p>AI chatbot for intelligent conversations, automation, and website/app integration for customer support, virtual assistance, and interactive user engagement.</p>
+<a href="https://github.com/Lokeshhsharmaa?tab=repositories" target="_blank">View Project →</a>
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section">
+<h2 class="section-title">Certifications</h2>
+<div class="underline"></div>
+
+<div class="grid grid-3">
+
+<div class="glass">
+<h3>Deloitte Australia – Data Analytics Job Simulation</h3>
+<p>Issued by Forage | 07/2025</p>
+<a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_BN8C7oBQguvkMsLpL_1753090889670_completion_certificate.pdf" target="_blank">View Certificate</a>
+</div>
+
+<div class="glass">
+<h3>SQL (Intermediate)</h3>
+<p>Issued by HackerRank | 12/2024</p>
+<a href="https://www.hackerrank.com/certificates/iframe/db261fd027a7" target="_blank">View Certificate</a>
+</div>
+
+<div class="glass">
+<h3>Microsoft Business Analyst Course</h3>
+<p>Issued by Microsoft | 03/2024</p>
+<a href="https://www.linkedin.com/learning/certificates/59e19de119429198019515fb7e75021d21955d8ac1ca0559ae797776d42d2996" target="_blank">View Certificate</a>
+</div>
+
+<div class="glass">
+<h3>IIT Madras Python Programming</h3>
+<p>Issued by GUVI | 10/2023</p>
+<a href="https://www.guvi.in/verify-certificate?id=9y9F4D045W780N4Cj1" target="_blank">View Certificate</a>
+</div>
+
+<div class="glass">
+<h3>Spreadsheet Module (Advanced Excel)</h3>
+<p>Issued by Newton School of Technology | 11/2024</p>
+<a href="https://my.newtonschool.co/course/6x4hl4dslyw9/certificate/ap3zya7jui1v/verify" target="_blank">View Certificate</a>
+</div>
+
+</div>
+</section>
+
+<!-- CONNECT -->
+<section class="section">
+<h2 class="section-title">Connect With Me</h2>
+<div class="underline"></div>
+
+<div class="connect-grid">
+<a href="https://github.com/Lokeshhsharmaa" target="_blank" class="connect-card">GitHub</a>
+<a href="https://www.linkedin.com/in/lokesh-sharma-05148424a/" target="_blank" class="connect-card">LinkedIn</a>
+<a href="mailto:Ls42409@gmail.com" class="connect-card">Email</a>
+</div>
+</section>
+
+<footer>
+© 2026 Lokesh Sharma | Data Analyst Portfolio
+</footer>
+
+<!-- BACKGROUND ANIMATION -->
+<script>
+const canvas = document.getElementById('data-bg');
+const ctx = canvas.getContext('2d');
+
+function resize(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+let points = [];
+const POINTS = 85;
+
+for(let i=0;i<POINTS;i++){
+  points.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    vx: (Math.random()-0.5)*0.35,
+    vy: (Math.random()-0.5)*0.35
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  for(let i=0;i<points.length;i++){
+    let p = points[i];
+
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if(p.x<0||p.x>canvas.width) p.vx*=-1;
+    if(p.y<0||p.y>canvas.height) p.vy*=-1;
+
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,1.4,0,Math.PI*2);
+    ctx.fillStyle = "rgba(168,85,247,0.9)";
+    ctx.fill();
+
+    for(let j=i+1;j<points.length;j++){
+      let q = points[j];
+      let dx = p.x-q.x;
+      let dy = p.y-q.y;
+      let dist = Math.sqrt(dx*dx+dy*dy);
+
+      if(dist < 130){
+        ctx.beginPath();
+        ctx.moveTo(p.x,p.y);
+        ctx.lineTo(q.x,q.y);
+        ctx.strokeStyle = "rgba(168,85,247,"+(1-dist/130)*0.18+")";
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
